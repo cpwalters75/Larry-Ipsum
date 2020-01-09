@@ -1,0 +1,51 @@
+#welcome-header {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 72px;
+    color: #141414;
+}
+
+#welcome-button {
+    border-radius: 5px;
+    background-color: #D3D3D3;
+    color: #141414;
+}
+
+#welcome {
+    background: url("../images/ricepaper_v3.png") center center;
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    top: 8%;
+}
+
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("../images/conference_of_Larry.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-full-screen .middle-content-section {
+    text-align: center;
+    color: #fefefe;
+    font-family: 'Petit Formal Script', cursive;
+  }
+  
+ 
+  
+
+  
+  
+
+  
