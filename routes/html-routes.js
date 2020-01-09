@@ -9,7 +9,7 @@ router.get('/ipsum', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/ipsum.html'));
 });
 
-// Place this route below all others to send he index.html file
+// Place this route below all others to send the index.html file
 // to any request that is not explicitly defined above
 router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
