@@ -22,6 +22,8 @@ cursive text:
     background-color: #D3D3D3;
     color: #141414;
     text-align: right; 
+    font-size: 1.5rem;
+    padding: 14px 45px;
 }
 
 #welcome {
