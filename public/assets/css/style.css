@@ -13,7 +13,7 @@ cursive text:
     font-family: 'Petit Formal Script', cursive;
     font-size: 72px;
     color: #141414;
-    text-shadow: 4px 4px 10px white;
+    text-shadow: 2px 2px 5px white;
 
 }
 
@@ -122,36 +122,36 @@ cursive text:
     border-top-right-radius: 5px;
   }
   
-  .signup-callout {
+.signup-callout {
     padding-top: 100px;
     padding-bottom: 100px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("https://unsplash.it/2000/1200?image=667");
     background-position: center center;
   }
   
-  .signup-callout h2 {
+.signup-callout h2 {
     color: #fff;
   }
   
-  .signup-callout p {
+.signup-callout p {
     color: #fff;
   }
   
-  .tabs-title > a {
+.tabs-title > a {
     padding: 1em 1.25em;
   }
   
-  #hero-header {
-      background-image: url("../images/vintage-wallpaper.png");
+#hero-header {
+      background-image: url("../images/edison_bulb.jpg");
+      object-fit: contain;
   }
-  #hero-header ul {
-    background-image: url("../images/vintage-wallpaper.png");
-}
 
 #hero-header h1{
     font-family: 'Petit Formal Script', cursive;
     font-size: 48px;
     color: #141414;
+    padding: 10px 5px;
+
 }
 
   
