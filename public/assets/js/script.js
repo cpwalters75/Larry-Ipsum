@@ -3,4 +3,8 @@ $(() => {
     event.preventDefault();
     window.location.replace('/ipsum.html');
   });
+
+ 
 });
+
+
