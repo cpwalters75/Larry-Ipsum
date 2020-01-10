@@ -60,6 +60,7 @@ cursive text:
   /*--END OF INDEX.HTML */
 /*==============================================================================================================*/
  /*--START OF IPSUM.HTML */
+ 
 .hero-search-filter {
   background: linear-gradient(to bottom right, #131313, transparent), url("../images/edison_bulb.jpg") center center no-repeat;
   height: 350px;
@@ -78,4 +79,41 @@ cursive text:
   color: #f5f0f0;
   padding: 10px 5px;
   text-shadow: 2px 2px 5px black;
+}
+
+.hover-underline-menu {
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+  background-color: #2C3840;
+}
+
+.hover-underline-menu .menu a {
+  color: #fefefe;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid #fefefe;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+#header-nav {
+  vertical-align: baseline;
 }
