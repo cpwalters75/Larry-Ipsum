@@ -1,0 +1,73 @@
+ /*=================================================================================================
+===================================================================================================
+-----STANDARDS-----
+CSS FRAMEWORK: Zurb Foundation https://foundation.zurb.com/
+cursive text:
+    * font color: #141414;
+    * font-family: 'Petit Formal Script', cursive;
+===================================================================================================
+=================================================================================================== */
+/*--Universal--*/
+body {
+    background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
+  }
+ /*--START OF IPSUM.HTML */
+ 
+ .hero-search-filter {
+    background: linear-gradient(to bottom right, #131313, transparent), url("../images/edison_bulb.jpg") center center no-repeat;
+    height: 350px;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    position: relative;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .hero-search-filter h1{
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 63px;
+    padding-left: 2%;
+    color: #f5f0f0;
+    padding: 10px 5px;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  .hover-underline-menu {
+    width: 100%;
+    position: absolute;
+    bottom:0px;
+  }
+  
+  .hover-underline-menu .menu {
+   
+    background: linear-gradient(to bottom right, #131313, transparent), url("../images/vintage-wallpaper.png") center center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .hover-underline-menu .menu a {
+    color: #fefefe;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center {
+    position: relative;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+  }
