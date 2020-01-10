@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const ipsum = sequelize.define('ipsum', {
-    ipsum: DataTypes.TEXT
+  const ipsums = sequelize.define('ipsums', {
+    ipsums: DataTypes.TEXT
   });
-  return ipsum;
+  return ipsums;
 };
