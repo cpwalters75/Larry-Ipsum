@@ -7,7 +7,10 @@ cursive text:
     * font-family: 'Petit Formal Script', cursive;
 ===================================================================================================
 =================================================================================================== */
-
+/*--Universal--*/
+ body {
+  background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
+}
 /*--START OF INDEX.HTML */
 #welcome-header {
     font-family: 'Petit Formal Script', cursive;
@@ -67,6 +70,7 @@ cursive text:
   background-size: cover;
   display: -webkit-flex;
   display: -ms-flexbox;
+  position: relative;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -76,6 +80,7 @@ cursive text:
 .hero-search-filter h1{
   font-family: 'Petit Formal Script', cursive;
   font-size: 63px;
+  padding-left: 2%;
   color: #f5f0f0;
   padding: 10px 5px;
   text-shadow: 2px 2px 5px black;
@@ -83,10 +88,14 @@ cursive text:
 
 .hover-underline-menu {
   width: 100%;
+  position: absolute;
+  bottom:0px;
 }
 
 .hover-underline-menu .menu {
-  background-color: #2C3840;
+ 
+  background: linear-gradient(to bottom right, #131313, transparent), url("../images/vintage-wallpaper.png") center center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hover-underline-menu .menu a {
@@ -115,5 +124,5 @@ cursive text:
 }
 
 #header-nav {
-  vertical-align: baseline;
+ 
 }
