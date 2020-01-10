@@ -1,6 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const ipsum = sequelize.define('ipsum', {
-    ipsum: DataTypes.TEXT
+  const ipsums = sequelize.define('ipsums', {
+    quote: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    }
   });
-  return ipsum;
+  return ipsums;
 };
