@@ -1,27 +1,27 @@
-const db = require("../models");
 
 const router = require('express').Router();
+const db = require('../models');
+
 
 router.get('/ipsum', (req, res) => {
-    db.ipsums.findAll({
-        include: [db.ipsums]
-    }).then((dbPost) => {
-        res.json(dbPost)
-        console.log("router")
-        console.log(dbPost);
-    }) 
-    res.json("asdfag") 
+  db.ipsums.findAll({
+    // include: [db.ipsums],
+  }).then((dbPost) => {
+    res.json(dbPost);
+    console.log(dbPost);
+  }).catch((error) => {
+    console.error(error);
+  });
+  
 });
 
-router.post('/api/ipsum', (req, res) => {
+router.post('/ipsum', (req, res) => {
 
-})
+});
 
 router.put('/api/hallOfLarry', (req, res) => {
 
-})
-
+});
 
 
 module.exports = router;
-
