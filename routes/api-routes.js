@@ -19,7 +19,7 @@ router.post('/ipsum', (req, res) => {
 
 });
 
-router.put('/api/hallOfLarry', (req, res) => {
+router.put('/hallOfLarry', (req, res) => {
 
 });
 
