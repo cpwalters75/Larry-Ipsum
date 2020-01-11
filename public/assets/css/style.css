@@ -8,58 +8,11 @@ cursive text:
 ===================================================================================================
 =================================================================================================== */
 
-/*--START OF INDEX.HTML */
-#welcome-header {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 72px;
-    color: #141414;
-    text-shadow: 2px 2px 5px white;
-
-}
-
-#welcome-button {
-    border-radius: 5px;
-    background-color: #D3D3D3;
-    color: #141414;
-    text-align: right; 
-    font-size: 1.5rem;
-    padding: 14px 45px;
-}
-
-#welcome {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    padding: 5px;
-    position: relative;
-    top: 8%;
-}
-
-.hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: url("../images/conference_of_Larry.jpg") center center no-repeat;
-    background-size: cover;
-  }
-  
-  .hero-full-screen .middle-content-section {
-    text-align: center;
-    color: #fefefe;
-    font-family: 'Petit Formal Script', cursive;
-  }
-  /*--END OF INDEX.HTML */
 /*==============================================================================================================*/
- /*--START OF IPSUM.HTML */
+body {
+  background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
+}
+/*--START OF IPSUM.HTML */
 
  @media screen and (max-width: 39.9375em) {
     .tabbed-search-content input[type=text] {
