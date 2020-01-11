@@ -7,10 +7,6 @@ cursive text:
     * font-family: 'Petit Formal Script', cursive;
 ===================================================================================================
 =================================================================================================== */
-/*--Universal--*/
- body {
-  background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
-}
 /*--START OF INDEX.HTML */
 #welcome-header {
     font-family: 'Petit Formal Script', cursive;
