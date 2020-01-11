@@ -1,7 +1,5 @@
 
 $(document).ready(() => {
-
-
  $('#ipsumCreate').on('click', (event) => {
     event.preventDefault();
     

@@ -13,7 +13,6 @@ body {
   background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
 }
 /*--Header Styling */
- 
 .hero-search-filter {
   background: linear-gradient(to bottom right, #131313, transparent), url("../images/edison_bulb.jpg") center center no-repeat;
   height: 350px;
@@ -43,8 +42,7 @@ body {
 }
 
 .hover-underline-menu .menu {
- 
-  background: linear-gradient(to bottom right, #131313, transparent), url("../images/vintage-wallpaper.png") center center;
+  background: linear-gradient(to bottom right, #131313, transparent), url("../images/leather.jfif") center center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
