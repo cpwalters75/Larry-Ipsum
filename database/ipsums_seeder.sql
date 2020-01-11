@@ -1,6 +1,6 @@
--- alter table ipsums modify createdAt datetime DEFAULT NOW();
--- alter table ipsums modify updatedAt datetime DEFAULT NOW();
--- select * from ipsums;
+ alter table ipsums modify createdAt datetime DEFAULT NOW();
+ alter table ipsums modify updatedAt datetime DEFAULT NOW();
+ select * from ipsums;
 INSERT INTO `larry`.`ipsums`
 	(`quote`)
 VALUES
