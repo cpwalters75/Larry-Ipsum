@@ -17,7 +17,7 @@
 <body>
   <header class="hero-search-filter">
     <div class="hero-search-filter-content">
-      <h1 class= "align-center">Larry Ipsum</h1 c>
+      <h1 class="align-center">Larry Ipsum</h1 c>
       <nav id="header-nav" class="hover-underline-menu align-bottom" data-menu-underline-from-center>
         <ul class="menu align-left">
           <li><a href="#">Ipsum</a></li>
@@ -26,53 +26,38 @@
       </nav>
     </div>
   </header>
-  <div id="main-content" class="row">
-    <div class="translucent-form-overlay">
-      <form>
-        <h3>Search for Properties</h3>
-        <div class="row columns">
-          <label>Keyword
-            <input type="text" name="keyword" placeholder="Any">
-          </label>
-        </div>
-        <div class="row columns">
-          <label>Property Status
-            <select name="status" type="text">
-              <option>Any</option>
-              <option value="rent">Rent</option>
-              <option value="buy">Buy</option>
-            </select>
-          </label>
-        </div>
-        <div class="row columns">
-          <label>Property Type
-            <select name="status" type="text">
-              <option>Any</option>
-              <option value="office">Office</option>
-              <option value="building">Building</option>
-            </select>
-          </label>
-        </div>
-        <div class="row columns">
-          <label>Location
-            <input type="text" name="location" placeholder="Any">
-          </label>
-        </div>
-        <div class="row">
-          <label class="columns small-12">Price</label>
-          <div class="columns small-6">
-            <input type="number" min="0" name="min" placeholder="Min">
+  <div class="row">
+    <div class="column">
+      <div class="translucent-form-overlay">
+        <form>
+          <h3>Build Your Ipsum</h3>
+          <div class="row columns">
+            <label>Number of Paragraphs</label>
+              <select name="status" type="text">
+                <option value="one">1</option>
+                <option value="three">3</option>
+                <option value="five">5</option>
+              </select>
+            </label>
           </div>
-          <div class="columns small-6">
-            <input type="number" min="0" name="max" placeholder="Max">
+          <div class="row columns">
+            <label>Length of Paragraphs
+              <select name="status" type="text">
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="Larry">Long</option>
+              </select>
+            </label>
           </div>
-        </div>
-        <button id="ipsumCreate" type="button" class="primary button expanded search-button">
-          Submit
-        </button>
-     </form>
+          <button id="ipsumCreate" type="button" class="primary button expanded search-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
+
   </div>
+
 
   <!-- Start of Scripts-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"

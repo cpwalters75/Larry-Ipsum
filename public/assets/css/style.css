@@ -76,9 +76,10 @@ body {
 .translucent-form-overlay {
   max-width: 500px;
   width: 100%;
-  background-color: rgba(54, 54, 54, 0.8);
+  background-color: rgba(254,254,254,0.8);
   padding: 20px;
-  color: #fefefe;
+  margin: 2%;
+  color: rgba(54, 54, 54);
 }
 
 .translucent-form-overlay .columns.row {
@@ -86,7 +87,7 @@ body {
 }
 
 .translucent-form-overlay h3, .translucent-form-overlay label {
-  color: #fefefe;
+  color:  rgba(54, 54, 54, 0.8);
 }
 
 .translucent-form-overlay input, .translucent-form-overlay select {
