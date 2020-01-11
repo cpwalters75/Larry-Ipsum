@@ -13,7 +13,6 @@ body {
   background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
 }
 /*--Header Styling */
- 
 .hero-search-filter {
   background: linear-gradient(to bottom right, #131313, transparent), url("../images/edison_bulb.jpg") center center no-repeat;
   height: 350px;
@@ -43,8 +42,7 @@ body {
 }
 
 .hover-underline-menu .menu {
- 
-  background: linear-gradient(to bottom right, #131313, transparent), url("../images/vintage-wallpaper.png") center center;
+  background: linear-gradient(to bottom right, #131313, transparent), url("../images/leather.jfif") center center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -72,6 +70,42 @@ body {
   right: 0;
   transition: all 0.5s ease;
 }
+/*================================================================================================================*/
+/*--START OF CONTENT BOX--*/
+
+.translucent-form-overlay {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(254,254,254,0.8);
+  padding: 20px;
+  margin: 2%;
+  color: rgba(54, 54, 54);
+}
+
+.translucent-form-overlay .columns.row {
+  display: block;
+}
+
+.translucent-form-overlay h3, .translucent-form-overlay label {
+  color:  rgba(54, 54, 54, 0.8);
+}
+
+.translucent-form-overlay input, .translucent-form-overlay select {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::placeholder {
+  color: #8a8a8a;
+}
+
 /*==============================================================================================================*/
  /*--START OF HALLOFLARRY.HTML */
 

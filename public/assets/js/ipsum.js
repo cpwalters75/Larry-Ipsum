@@ -1,7 +1,5 @@
 
 $(document).ready(() => {
-
-
  $('#ipsumCreate').on('click', (event) => {
     event.preventDefault();
     
@@ -13,7 +11,6 @@ $(document).ready(() => {
   })
 
 });
-
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
