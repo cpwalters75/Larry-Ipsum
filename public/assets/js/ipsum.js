@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 $(document).ready(() => {
 
@@ -14,7 +13,7 @@ $(document).ready(() => {
   })
 
 });
-=======
+
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $("[data-menu-underline-from-center] a").addClass("underline-from-center");
->>>>>>> dff09d7c6b2a7cc3c425241ed85cec2faf7cdbda
+
