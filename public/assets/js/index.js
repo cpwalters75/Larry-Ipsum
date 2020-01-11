@@ -6,4 +6,4 @@ $(() => {
 });
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
-$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+$('[data-menu-underline-from-center] a').addClass("underline-from-center");

@@ -3,10 +3,7 @@ const db = require("../models");
 const router = require('express').Router();
 
 router.get('/ipsum', (req, res) => {
-    db.ipsums.findOne({
-        where: {
-            id: 1
-        },
+    db.ipsums.findAll({
         include: [db.ipsums]
     }).then((dbPost) => {
         res.json(dbPost)
