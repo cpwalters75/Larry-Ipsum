@@ -13,8 +13,8 @@ $(document).ready(() => {
         
     });
   });
-
+  $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 });
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
-$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
 
