@@ -7,153 +7,105 @@ cursive text:
     * font-family: 'Petit Formal Script', cursive;
 ===================================================================================================
 =================================================================================================== */
-
-/*--START OF INDEX.HTML */
-#welcome-header {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 72px;
-    color: #141414;
-    text-shadow: 2px 2px 5px white;
-
-}
-
-#welcome-button {
-    border-radius: 5px;
-    background-color: #D3D3D3;
-    color: #141414;
-    text-align: right; 
-    font-size: 1.5rem;
-    padding: 14px 45px;
-}
-
-#welcome {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    padding: 5px;
-    position: relative;
-    top: 8%;
-}
-
-.hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: url("../images/conference_of_Larry.jpg") center center no-repeat;
-    background-size: cover;
-  }
-  
-  .hero-full-screen .middle-content-section {
-    text-align: center;
-    color: #fefefe;
-    font-family: 'Petit Formal Script', cursive;
-  }
-  /*--END OF INDEX.HTML */
+/* UNIVERSAL STYLING*/
 /*==============================================================================================================*/
- /*--START OF IPSUM.HTML */
-
- @media screen and (max-width: 39.9375em) {
-    .tabbed-search-content input[type=text] {
-      margin-top: 0px;
-    }
-  }
-  
-  .tabbed-search-content select {
-    margin-top: 15px;
-    background: #2d2b27;
-    color: white;
-    border: 1px solid #7a7469;
-    border-radius: 3px;
-    font-weight: 400;
-    padding-left: 15px;
-  }
-  
-  @media screen and (max-width: 39.9375em) {
-    .tabbed-search-content select {
-      margin-top: 0px;
-    }
-  }
-  
-  .tabbed-search-content .button.search-button {
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 3px;
-    margin-top: 15px;
-  }
-  
-  @media screen and (max-width: 39.9375em) {
-    .tabbed-search-content .button.search-button {
-      margin-top: 0px;
-    }
-  }
-  
-  .tabbed-search-content .button.search-button i {
-    height: 15px;
-    width: 15px;
-    margin-right: 5px;
-    margin-top: -2px;
-  }
-  
-  .tabs-title > a {
-    color: #fff;
-    font-size: 1em;
-  }
-  
-  .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
-    color: #fff;
-    background: #43403a;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .tabs-title > a:hover {
-    color: #fff;
-    background: #43403a;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-.signup-callout {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("https://unsplash.it/2000/1200?image=667");
-    background-position: center center;
-  }
-  
-.signup-callout h2 {
-    color: #fff;
-  }
-  
-.signup-callout p {
-    color: #fff;
-  }
-  
-.tabs-title > a {
-    padding: 1em 1.25em;
-  }
-  
-#hero-header {
-      background-image: url("../images/edison_bulb.jpg");
-      object-fit: contain;
-  }
-
-#hero-header h1{
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 48px;
-    color: #141414;
-    padding: 10px 5px;
-
+body {
+  background: linear-gradient(to bottom,rgb(53, 53, 53) 10%, white)
 }
-  /*--END OF IPSUM.HTML */
+/*--Header Styling */
+.hero-search-filter {
+  background: linear-gradient(to bottom right, #131313, transparent), url("../images/edison_bulb.jpg") center center no-repeat;
+  height: 350px;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  position: relative;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-search-filter h1{
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 63px;
+  padding-left: 2%;
+  color: #f5f0f0;
+  padding: 10px 5px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.hover-underline-menu {
+  width: 100%;
+  position: absolute;
+  bottom:0px;
+}
+
+.hover-underline-menu .menu {
+  background: linear-gradient(to bottom right, #131313, transparent), url("../images/leather.jfif") center center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hover-underline-menu .menu a {
+  color: #fefefe;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid #fefefe;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+/*================================================================================================================*/
+/*--START OF CONTENT BOX--*/
+
+.translucent-form-overlay {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(254,254,254,0.8);
+  padding: 20px;
+  margin: 2%;
+  color: rgba(54, 54, 54);
+}
+
+.translucent-form-overlay .columns.row {
+  display: block;
+}
+
+.translucent-form-overlay h3, .translucent-form-overlay label {
+  color:  rgba(54, 54, 54, 0.8);
+}
+
+.translucent-form-overlay input, .translucent-form-overlay select {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::placeholder {
+  color: #8a8a8a;
+}
+
 /*==============================================================================================================*/
  /*--START OF HALLOFLARRY.HTML */
 
