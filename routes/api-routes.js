@@ -12,7 +12,6 @@ router.get('/ipsum', (req, res) => {
   }).catch((error) => {
     console.error(error);
   });
-  
 });
 */
 router.get('/ipsum/:quantity/:length', (req, res) => {
@@ -52,6 +51,9 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
 
 
 router.post('/ipsum', (req, res) => {
+  db.ipsums.create(req.body).then((dbPost) => {
+    res.json(dbPost);
+  });
 
 });
 
