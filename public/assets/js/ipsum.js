@@ -1,13 +1,36 @@
 
 $(document).ready(() => {
 
-  $('#ipsumCreate').on('click', (event) => {
+const getContent = function (paraQuantity, paraLength) {
+  let queryString = "/api/ipsum/";
+  queryString += paraQuantity;
+  queryString += "/";
+  queryString += paraLength;
+  $.get(queryString, function(data) {
+    let ipsum='';
+      data.forEach((line)=> {
+        ipsum += line.quote + " ";
+      });
+  $("#publish-ipsum").text(ipsum);
+  });
+}
 
+
+// START OF CLICK EVENTS ----------------------------------------------------------
+  $('#ipsum-create').on('click', (event) => {
     event.preventDefault();
-
-    $.get('/api/ipsum', (data) => {
-      console.log(data);
+    let paraLength = $("#para-length").val();
+    let paraQuantity = $("#para-quantity").val();
+    getContent(paraQuantity, paraLength);
+/*
+   $.get("/api/ipsum", function(data) {
+      let ipsum=''
+        data.forEach((line)=> {
+          ipsum += line.quote + " ";
+        })
+    $("#publish-ipsum").val(ipsum);
     });
+*/
   });
 
   // below is for creating new Larrys, I can't seem to get the value from #newLarry
@@ -24,8 +47,8 @@ $(document).ready(() => {
   }
 
   $(document).on('click', '#larryCreate', newLarry);
-});
+
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
-
+});
