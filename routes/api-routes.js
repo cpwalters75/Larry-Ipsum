@@ -12,10 +12,12 @@ router.get('/ipsum', (req, res) => {
   }).catch((error) => {
     console.error(error);
   });
-  
 });
 
 router.post('/ipsum', (req, res) => {
+  db.ipsums.create(req.body).then((dbPost) => {
+    res.json(dbPost);
+  });
 
 });
 
