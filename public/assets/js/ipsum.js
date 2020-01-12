@@ -11,8 +11,9 @@ $(document).ready(() => {
         data.forEach((line)=> {
           ipsum += line.quote + " ";
         })
-        console.log(ipsum);
+    $("#publish-ipsum").val(ipsum);
     });
+
   });
  
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
