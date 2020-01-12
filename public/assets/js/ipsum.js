@@ -2,8 +2,13 @@
 $(document).ready(() => {
 
 const getContent = function (conditions) {
-  $.get("/api/ipsum", function(data) {
+  let queryString = "/api/ipsum/";
+  queryString += $("#para-quantity").val();
+  queryString += "/";
+  queryString += $("#para-length").val();
+  $.get(queryString, function(data) {
     let ipsum='';
+    console.log(data);
       data.forEach((line)=> {
         ipsum += line.quote + " ";
       });
