@@ -1,14 +1,13 @@
 
 $(document).ready(() => {
 
-const getContent = function (conditions) {
+const getContent = function (paraQuantity, paraLength) {
   let queryString = "/api/ipsum/";
-  queryString += $("#para-quantity").val();
+  queryString += paraQuantity;
   queryString += "/";
-  queryString += $("#para-length").val();
+  queryString += paraLength;
   $.get(queryString, function(data) {
     let ipsum='';
-    console.log(data);
       data.forEach((line)=> {
         ipsum += line.quote + " ";
       });
@@ -20,11 +19,9 @@ const getContent = function (conditions) {
 // START OF CLICK EVENTS ----------------------------------------------------------
   $('#ipsum-create').on('click', (event) => {
     event.preventDefault();
-    let conditions = {
-      paraLength : $("#para-length").val(),
-      paraQuantity : $("#para-quantity").val()
-    }
-    getContent(conditions);
+    let paraLength = $("#para-length").val();
+    let paraQuantity = $("#para-quantity").val();
+    getContent(paraQuantity, paraLength);
 /*
    $.get("/api/ipsum", function(data) {
       let ipsum=''
