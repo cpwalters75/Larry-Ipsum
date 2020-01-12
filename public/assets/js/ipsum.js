@@ -2,19 +2,19 @@
 $(document).ready(() => {
 
 
-  $('#ipsumCreate').on('click', (event) => {
+  $('#ipsum-create').on('click', (event) => {
 
     event.preventDefault();
 
     $.get("/api/ipsum", function(data) {
-        console.log("clicked")
-        console.log(data)
-        
-        
+      let ipsum=''
+        data.forEach((line)=> {
+          ipsum += line.quote + " ";
+        })
+        console.log(ipsum);
     });
   });
-  $("[data-menu-underline-from-center] a").addClass("underline-from-center");
-});
+ 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
-
-
+$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+});
