@@ -16,6 +16,6 @@ app.use('/', routes);
 // =============================================
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+    console.log(`App listening on PORT ${PORT} and process is PID ${process.pid}`);
   });
 });
