@@ -40,11 +40,12 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   } else {
     res.error(404);
   }
- // console.log("quantity",quantity);
-  //console.log("paraQuantity",paraQuantity);
-  console.log("length",length);
-  console.log("paraLength",paraLength);
-  res.json("got the message!");
+  let data = {
+    paraQuantity : paraQuantity,
+    paraLength : paraLength,
+  }
+  
+  res.json(data);
 })
 
 

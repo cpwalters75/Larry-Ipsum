@@ -5,15 +5,20 @@ const getContent = function (paraQuantity, paraLength) {
   let queryString = "/api/ipsum/";
   queryString += paraQuantity;
   queryString += "/";
+  console.log(queryString);
   queryString += paraLength;
+
   $.get(queryString, function(data) {
     let ipsum='';
-      data.forEach((line)=> {
-        ipsum += line.quote + " ";
-      });
+    console.log(data);
+     // data.forEach((line)=> {
+       // ipsum += line.quote + " ";
+      //});
   $("#publish-ipsum").text(ipsum);
-  });
-}
+  
+  })
+};
+
 
 
 // START OF CLICK EVENTS ----------------------------------------------------------
@@ -51,4 +56,6 @@ const getContent = function (paraQuantity, paraLength) {
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
+
+
 });
