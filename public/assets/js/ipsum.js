@@ -5,16 +5,14 @@ const getContent = function (paraQuantity, paraLength) {
   let queryString = "/api/ipsum/";
   queryString += paraQuantity;
   queryString += "/";
-  console.log(queryString);
   queryString += paraLength;
-
+  console.log(queryString);
   $.get(queryString, function(data) {
-    let ipsum='';
     console.log(data);
      // data.forEach((line)=> {
        // ipsum += line.quote + " ";
       //});
-  $("#publish-ipsum").text(ipsum);
+  $("#publish-ipsum").text("hurray");
   
   })
 };
@@ -39,19 +37,19 @@ const getContent = function (paraQuantity, paraLength) {
   });
 
   // below is for creating new Larrys, I can't seem to get the value from #newLarry
-  // const larryText = $('#newLarry').val().trim();
-  // const larryEntry = `${larryText} so, call it Larry.`;
+   const larryText = $('#new-larry').val().trim();
+   const larryEntry = $('#new-larry').val().trim() + 'so, call it Larry.';
 
-  // function newLarry(event) {
-  //   event.preventDefault();
-  //   const larry = {
-  //     quote: larryEntry,
-  //   };
-  //   console.log(larryText);
-  //   $.post('/api/ipsum', larry);
-  // }
+   function newLarry(event) {
+    event.preventDefault();
+    const larry = {
+       quote: larryEntry,
+    };
+    
+    $.post('/api/ipsum', larry);
+   }
 
-  // $(document).on('click', '#larryCreate', newLarry);
+   $('#larry-create').on('click', newLarry);
 
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================

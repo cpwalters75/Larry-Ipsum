@@ -15,37 +15,42 @@ router.get('/ipsum', (req, res) => {
 });
 */
 router.get('/ipsum/:quantity/:length', (req, res) => {
-  let quantity = req.params.quantity.toString();
-  let length = req.params.length.toString();
-
-  if (quantity === "one") {
-   let paraQuantity = 1;
-  } 
-  else if (quantity === "three") {
-   let paraQuantity = 3;
-  } 
-  else if (quantity === "five") {
-   let paraQuantity = 5;
-  } 
-  else {
-    res.error(404);
+  
+  let quantity = req.params.quantity;
+  /*
+  let length = req.params.length;
+ console.log(quantity);
+  if (quantity == "one") {
+    let paraQuantity = 1;
+    return paraQuantity;
   }
+  else if (quantity == "three") {
+    let paraQuantity = 3;
+    return paraQuantity;
+  }
+  else if (quantity == "five") {
+    let paraQuantity = 5;
+    return paraQuantity;
+  }
+  else {
+    res.err(404);
+  }
+console.log(paraQuantity)
 
   if (length === "short") {
-   let paraLength = 3;
+    let paraLength = 3;
+    return paraLength;
   } else if (length === "medium") {
-   let paraLength = 5;
+    let paraLength = 5;
+    return paraLength;
   } else if (length === "long") {
-   let paraLength = 7;
+    let paraLength = 7;
+    return paraLength;
   } else {
     res.error(404);
   }
-  let data = {
-    paraQuantity : paraQuantity,
-    paraLength : paraLength,
-  }
-  
-  res.json(data);
+*/
+res.status(200).json(quantity)
 })
 
 
