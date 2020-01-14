@@ -37,6 +37,7 @@ const getContent = function (paraQuantity, paraLength) {
   });
 
   // below is for creating new Larrys, I can't seem to get the value from #newLarry
+  /*
    const larryText = $('#new-larry').val().trim();
    const larryEntry = $('#new-larry').val().trim() + 'so, call it Larry.';
 
@@ -51,7 +52,7 @@ const getContent = function (paraQuantity, paraLength) {
 
    $('#larry-create').on('click', newLarry);
 
-
+*/
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
 

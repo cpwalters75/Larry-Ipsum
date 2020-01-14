@@ -2,6 +2,18 @@
 const router = require('express').Router();
 const db = require('../models');
 
+class BUILD_IPSUM {
+  constructor(quantity,length) 
+  {
+    quantity: this.quantity,
+    length: this.length
+  }
+
+  setIpsumLength(paraQuantity, paraLength) {
+      return ipsumLength = this.quantity * this.length;
+  }
+};
+
 /*
 router.get('/ipsum', (req, res) => {
   db.ipsums.findAll({
@@ -17,9 +29,9 @@ router.get('/ipsum', (req, res) => {
 router.get('/ipsum/:quantity/:length', (req, res) => {
   
   let quantity = req.params.quantity;
-  /*
   let length = req.params.length;
- console.log(quantity);
+
+ 
   if (quantity == "one") {
     let paraQuantity = 1;
     return paraQuantity;
@@ -35,7 +47,6 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   else {
     res.err(404);
   }
-console.log(paraQuantity)
 
   if (length === "short") {
     let paraLength = 3;
@@ -49,8 +60,12 @@ console.log(paraQuantity)
   } else {
     res.error(404);
   }
-*/
-res.status(200).json(quantity)
+
+  let ipsum = paraQuantity * paraLength
+
+
+
+  res.json(data);
 })
 
 
