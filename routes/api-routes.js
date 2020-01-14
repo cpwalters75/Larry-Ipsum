@@ -27,36 +27,29 @@ class Build_Ipsum {
   
     switch(this.length) {
       case "short":
-         paraLength = 3;
+          paraLength = 3;
         break
       case "medium":
-         paraLength = 5;
+          paraLength = 5;
         break
       case "long":
-         paraLength = 7;
+          paraLength = 7;
         break
       default:
-         paraLength = 1;
+          paraLength = 1;
     }
 
-    this.setIpsumLength(paraQuantity,paraLength);
+    return this.setIpsumLength(paraQuantity,paraLength);
 
   }
 
   setIpsumLength(paraQuantity, paraLength) {
       let ipsumLength = paraQuantity * paraLength;
-      this.queryData(ipsumLength);
+      return this.queryData(ipsumLength);
   }
 
   queryData(ipsumLength) {
-    db.ipsums.findAll({
-      include: [db.ipsums],
-    }).then((dbPost)=> {
-      res.json(dbPost);
-      console.log(dbPost);
-    }).catch((error) => {
-      console.error(error);
-    })
+    return db.ipsums.findAll({});
     }
   }
 
@@ -78,8 +71,15 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   let length = req.params.length;
   let newIpsum = new Build_Ipsum(quantity,length);
 
-  //newIpsum.setValue();
-  res.json("this works");
+  newIpsum.setValue().then((dbPost) => {
+    res.json(dbPost);
+    console.log(dbPost);
+  }).catch((error) => {
+    console.error(error);
+  });;
+
+
+  //res.json("this works");
 })
 
 
