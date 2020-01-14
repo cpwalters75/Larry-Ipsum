@@ -3,15 +3,52 @@ const router = require('express').Router();
 const db = require('../models');
 
 class BUILD_IPSUM {
-  constructor(quantity,length) 
-  {
-    quantity: this.quantity,
-    length: this.length
+  constructor(quantity,length) {
+    this.quantity = quantity,
+    this.length = length
+  }
+
+  setValues() {
+    switch(this.quantity) {
+      case "one":
+        let paraQuantity = 1;
+        break
+      case "three":
+        let paraQuantity = 3;
+        break
+      case "five":
+        let paraQuantity = 5;
+        break
+      default:
+        let paraQuantity = 100;
+    }
+
+    switch(this.length) {
+      case "short":
+        let paraLength = 3;
+        break
+      case "medium":
+        let paraLength = 5;
+        break
+      case "long":
+        let paraLength = 7;
+        break
+      default:
+        let paraLength = 1;
+    }
+
+    return paraQuantity, paraLength
   }
 
   setIpsumLength(paraQuantity, paraLength) {
-      return ipsumLength = this.quantity * this.length;
+      return ipsumLength = paraQuantity * paraLength;
   }
+
+  queryData(ipsumLength) {
+    db.ipsums.fin
+    //query database here
+  }
+
 };
 
 /*
