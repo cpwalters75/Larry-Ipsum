@@ -2,25 +2,26 @@
 const router = require('express').Router();
 const db = require('../models');
 
-class BUILD_IPSUM {
+class Build_Ipsum {
   constructor(quantity,length) {
     this.quantity = quantity,
     this.length = length
   }
 
   setValues() {
+    let paraQuantity = '';
     switch(this.quantity) {
       case "one":
-        let paraQuantity = 1;
+         paraQuantity = 1;
         break
       case "three":
-        let paraQuantity = 3;
+         paraQuantity = 3;
         break
       case "five":
-        let paraQuantity = 5;
+         paraQuantity = 5;
         break
       default:
-        let paraQuantity = 100;
+         paraQuantity = 100;
     }
 
     switch(this.length) {
@@ -37,15 +38,16 @@ class BUILD_IPSUM {
         let paraLength = 1;
     }
 
-    return paraQuantity, paraLength
+    this.setIpsumLength(paraQuantity,paraLength);
+
   }
 
   setIpsumLength(paraQuantity, paraLength) {
-      return ipsumLength = paraQuantity * paraLength;
+      let ipsumLength = paraQuantity * paraLength;
+      this.queryData(ipsumLength);
   }
 
   queryData(ipsumLength) {
-    db.ipsums.fin
     //query database here
   }
 
@@ -68,7 +70,7 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   let quantity = req.params.quantity;
   let length = req.params.length;
 
- 
+ /*
   if (quantity == "one") {
     let paraQuantity = 1;
     return paraQuantity;
@@ -99,10 +101,13 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   }
 
   let ipsum = paraQuantity * paraLength
+*/
+let newIpsum = new Build_Ipsum(quantity,length);
+
+newIpsum.setValues()
 
 
-
-  res.json(data);
+  res.json("message recieved!");
 })
 
 
