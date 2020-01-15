@@ -23,22 +23,20 @@ const getContent = function (paraQuantity, paraLength) {
     getContent(paraQuantity, paraLength);
   });
 
+  // below is for creating new Larrys
 
+  function newLarry(event) {
+    event.preventDefault();
+    const larryText = $('#new-larry').val();
+    const larryEntry = `${larryText} so, call it Larry.`; 
+    const larry = {
+      quote: larryEntry,
+    };
 
+    $.post('/api/ipsum', larry);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  $(document).on('click', '#larry-create', newLarry);
 
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
