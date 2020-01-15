@@ -6,14 +6,13 @@ const getContent = function (paraQuantity, paraLength) {
   queryString += paraQuantity;
   queryString += "/";
   queryString += paraLength;
+  console.log(queryString);
   $.get(queryString, function(data) {
-    let ipsum='';
-      data.forEach((line)=> {
-        ipsum += line.quote + " ";
-      });
-  $("#publish-ipsum").text(ipsum);
-  });
-}
+    console.log(data);
+  $("#publish-ipsum").text(data);
+  })
+};
+
 
 
 // START OF CLICK EVENTS ----------------------------------------------------------
@@ -22,15 +21,6 @@ const getContent = function (paraQuantity, paraLength) {
     let paraLength = $("#para-length").val();
     let paraQuantity = $("#para-quantity").val();
     getContent(paraQuantity, paraLength);
-/*
-   $.get("/api/ipsum", function(data) {
-      let ipsum=''
-        data.forEach((line)=> {
-          ipsum += line.quote + " ";
-        })
-    $("#publish-ipsum").val(ipsum);
-    });
-*/
   });
 
   // below is for creating new Larrys
@@ -51,4 +41,6 @@ const getContent = function (paraQuantity, paraLength) {
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
+
+
 });
