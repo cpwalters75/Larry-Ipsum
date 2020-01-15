@@ -33,20 +33,20 @@ const getContent = function (paraQuantity, paraLength) {
 */
   });
 
-  // below is for creating new Larrys, I can't seem to get the value from #newLarry
-  // const larryText = $('#newLarry').val().trim();
-  // const larryEntry = `${larryText} so, call it Larry.`;
+  // below is for creating new Larrys
 
-  // function newLarry(event) {
-  //   event.preventDefault();
-  //   const larry = {
-  //     quote: larryEntry,
-  //   };
-  //   console.log(larryText);
-  //   $.post('/api/ipsum', larry);
-  // }
+  function newLarry(event) {
+    event.preventDefault();
+    const larryText = $('#new-larry').val();
+    const larryEntry = `${larryText} so, call it Larry.`; 
+    const larry = {
+      quote: larryEntry,
+    };
 
-  // $(document).on('click', '#larryCreate', newLarry);
+    $.post('/api/ipsum', larry);
+  }
+
+  $(document).on('click', '#larry-create', newLarry);
 
 
 // START OF FOUNDATION JAVASCRIPT ===========================================================================================
