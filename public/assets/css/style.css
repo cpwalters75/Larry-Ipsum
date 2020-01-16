@@ -245,22 +245,6 @@ body {
 }
 
 
-
-/* styling for Larry Defined */
-
-.hide {
-  display: none;
-}
-
-#allLarry {
-  font-weight: bold;
-  padding-top: 15px;
-}
-
-#larryDefined {
-  text-align: center;
-}
-
 /* social buttons */
 
 .social-icon-button {
