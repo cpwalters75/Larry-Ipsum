@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const db = require('./models');
 const routes = require('./routes');
@@ -17,6 +18,7 @@ app.use('/', routes);
 // =============================================
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+    console.log(`App listening on PORT ${PORT} and process is PID ${process.pid}`);
   });
 });
+
