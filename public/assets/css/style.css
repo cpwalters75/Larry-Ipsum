@@ -104,7 +104,12 @@ body {
 .translucent-form-overlay input::placeholder {
   color: #8a8a8a;
 }
+/*==============================================================================================================*/
+ /*--START OF IPSUM.HTML */
 
+ #publish-ipsum {
+   text-indent: 3%;
+ }
 /*==============================================================================================================*/
  /*--START OF HALLOFLARRY.HTML */
 
@@ -337,3 +342,5 @@ body {
 .social-icon-button.facebook span {
   background-color: #3b5998;
 }
+
+
