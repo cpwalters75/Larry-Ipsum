@@ -1,6 +1,7 @@
 
 const router = require('express').Router();
 const db = require('../models');
+const nodemailer = require('nodemailer');
 
 router.get('/ipsum/:quantity/:length', (req, res) => {
   
@@ -12,30 +13,30 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
 
   switch(quantity) {
     case "one":
-       paraQuantity = 1;
+      paraQuantity = 1;
       break
     case "three":
-       paraQuantity = 3;
+      paraQuantity = 3;
       break
     case "five":
-       paraQuantity = 5;
+      paraQuantity = 5;
       break
     default:
-       paraQuantity = 100;
+      paraQuantity = 100;
   }
 
   switch(length) {
     case "short":
-        paraLength = 3;
+      paraLength = 3;
       break
     case "medium":
-        paraLength = 5;
+      paraLength = 5;
       break
     case "long":
-        paraLength = 7;
+      paraLength = 7;
       break
     default:
-        paraLength = 1;
+      paraLength = 1;
   }
 
   let ipsumLength = paraQuantity * paraLength;
@@ -46,21 +47,47 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
       ipsum += line.quote + " ";
     });
 
-   res.json(ipsum);
+    res.json(ipsum);
 
   }).catch((error) => {
     console.error(error);
   });
 });
 
-
-
-
 router.post('/ipsum', (req, res) => {
   db.ipsums.create(req.body).then((dbPost) => {
     res.json(dbPost);
   });
+});
 
+router.post('/send', (req, res) => {
+  const recipient = req.body.to;
+  const message = req.body.text;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+  
+  let mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: recipient,
+    subject: 'Your Larry Larry Larry',
+    text: message,
+  };
+
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      console.log('Larror has occurred', err);
+    } else {
+      console.log(`Email has been sent to ${recipient}`);
+      
+    }
+  });
+ 
 });
 
 router.put('/hallOfLarry', (req, res) => {
