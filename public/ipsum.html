@@ -25,7 +25,7 @@
           <li><a href="ipsum.html">Ipsum</a></li>
           <li><a href="hallOfLarry.html">Hall of Larry</a></li>
           <li><a href="larryDefined.html">What is a Larry!?</a></li>
-          <li><a href="larror.html">Think you don't need Larry??</a></li>
+          <li><a href="larror.html">Think you don't need Larry???</a></li>
         </ul>
         </ul>
         <div class="row">
@@ -38,57 +38,55 @@
       </nav>
     </div>
   </header>
-  <div class="row">
-    <div class="large-4.columns">
-      <div class="translucent-form-overlay">
-        <form>
-          <h3>Build Your Ipsum</h3>
-          <div class="row columns">
-            <label>Number of Paragraphs</label>
-            <select id="para-quantity" name="status" type="text">
-              <option value="one">1</option>
-              <option value="three">3</option>
-              <option value="five">5</option>
+  <div class="large-4 columns">
+    <div class="translucent-form-overlay">
+      <form>
+        <h3>Build Your Ipsum!</h3>
+        <div class="row columns">
+          <label>Number of Paragraphs</label>
+          <select id="para-quantity" name="status" type="text">
+            <option value="one">1</option>
+            <option value="three">3</option>
+            <option value="five">5</option>
+          </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Length of Paragraphs
+            <select id="para-length" name="status" type="text">
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
             </select>
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Length of Paragraphs
-              <select id="para-length" name="status" type="text">
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-              </select>
-            </label>
-          </div>
-          <button id="ipsum-create" type="button" class="primary button expanded search-button">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-    <div class="large-8.columns">
-      <div class="translucent-form-overlay">
-        <label>
-          Your Ipsum will appear here!
-          <p id="publish-ipsum" placeholder="None"></p>
-        </label>
-      </div>
-    </div>
-
-    <div class="large-8.columns">
-      <div class="translucent-form-overlay">
-        <label>
-          Add your own Larry
-          <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
-        </label>
-        <button id="larry-create" type="button" class="primary button expanded search-button">
+          </label>
+        </div>
+        <button id="ipsum-create" type="button" class="primary button expanded search-button">
           Submit
         </button>
-      </div>
+      </form>
     </div>
-
   </div>
+  <div class="large-4 columns">
+    <div class="translucent-form-overlay">
+      <label>
+        Your Ipsum will appear here!
+        <p id="publish-ipsum" placeholder="None"></p>
+      </label>
+    </div>
+  </div>
+
+  <div class="large-4 columns">
+    <div class="translucent-form-overlay">
+      <label>
+        Add your own Larry
+        <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
+      </label>
+      <button id="larry-create" type="button" class="primary button expanded search-button">
+        Submit
+      </button>
+    </div>
+  </div>
+
 
 
   <!-- Start of Scripts-->
