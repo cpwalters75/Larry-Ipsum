@@ -52,6 +52,7 @@
           </select>
           </label>
         </div>
+
         <div class="row columns">
           <label>Length of Paragraphs
             <select id="para-length" name="status" type="text">
@@ -59,38 +60,9 @@
               <option value="medium">Medium</option>
               <option value="long">Long</option>
             </select>
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Length of Paragraphs
-              <select id="para-length" name="status" type="text">
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-              </select>
-            </label>
-          </div>
-          <button id="ipsum-create" type="button" class="primary button expanded search-button">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-    <div class="large-8.columns">
-      <div class="translucent-form-overlay">
-        <label>
-          Your Ipsum will appear here!
-          <p id="publish-ipsum" placeholder="None"></p>
-        </label>
-      </div>
-    </div>
-
-    <div class="large-8.columns">
-      <div class="translucent-form-overlay">
-        <h3>Add your own Larry</h3>
-          <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
-        </h3>
-        <button id="larry-create" type="button" class="primary button expanded search-button">
+          </label>
+        </div>
+        <button id="ipsum-create" type="button" class="primary button expanded search-button">
           Submit
         </button>
       </form>
@@ -98,11 +70,22 @@
   </div>
   <div class="large-4 columns">
     <div class="translucent-form-overlay">
-      <label>
-        <textarea id="publish-ipsum" placeholder="Your Ipsum will appear here!"></textarea>
+       <p id="label">Your Ipsum will appear here!</p>
       </label>
     </div>
   </div>
+  <div class="large-8.columns">
+    <div class="translucent-form-overlay">
+      <h3>Add your own Larry</h3>
+      <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
+      </h3>
+      <button id="larry-create" type="button" class="primary button expanded search-button">
+        Submit
+      </button>
+      </form>
+    </div>
+  </div>
+ 
 
   <div class="large-4 columns">
     <div class="translucent-form-overlay">
@@ -119,7 +102,7 @@
     <div class="large-8.columns">
       <div class="translucent-form-overlay">
         <h3>Want your Larry Ipsum emailed?</h3>
-          <input type="email" id="larry-email" placeholder="Enter email address"></input>
+        <input type="email" id="larry-email" placeholder="Enter email address"></input>
         </h3>
         <button id="email-button" type="submit" class="primary button expanded search-button">
           Send email
