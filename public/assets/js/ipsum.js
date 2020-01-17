@@ -1,14 +1,27 @@
 
 $(document).ready(() => {
+  var ipsumText = document.querySelector('#label');
   const getContent = function (paraQuantity, paraLength) {
     let queryString = '/api/ipsum/';
     queryString += paraQuantity;
     queryString += '/';
     queryString += paraLength;
-    console.log(queryString);
+    $('#label').text('');
     $.get(queryString, (data) => {
+      let ipsum = '';
+      let counter = 0;
+      let count = 0;
       console.log(data);
-      $('#publish-ipsum').text(data);
+      data.ipsum.forEach((line) => {
+        ipsum += line.quote + " ";
+        counter += 1;
+        if (counter >= data.length) {
+          $('#label').append(`<p data-set = "ipsum">${ipsum}</p>`);
+          counter= 0;
+          ipsum = '';
+        }
+      });
+
     });
   };
 
@@ -46,7 +59,7 @@ $(document).ready(() => {
   function sendEmail(event) {
     event.preventDefault();
     const emailTo = $('#larry-email').val();
-    const emailText = $('#publish-ipsum').text();
+    const emailText = $('#label').text();
     const emailParams = {
       to: emailTo,
       text: emailText,
