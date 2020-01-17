@@ -113,9 +113,7 @@ body {
 /*==============================================================================================================*/
  /*--START OF HALLOFLARRY.HTML */
 
- body {
-   background-color: blue
- }
+
  .timeline .timeline-item::after, .timeline .timeline-item::before {
   clear: both;
   content: '';
@@ -167,13 +165,13 @@ body {
 .timeline .timeline-item .timeline-icon {
   background: #fefefe;
   border-radius: 50%;
-  height: 50px;
+  height: 100px;
   left: 50%;
-  margin-left: -23px;
+  margin-left: -45px;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 50px;
+  width: 100px;
 }
 
 .timeline .timeline-item .timeline-icon img,
@@ -246,7 +244,11 @@ body {
     left: 0;
   }
 }
-
+.larryfont{
+  padding: 3px;
+  background-color: rgba(254,254,254,0.8);
+  color: black !important;
+ }
 
 /* social buttons */
 
