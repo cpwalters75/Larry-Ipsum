@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatable" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
-  <link rel='icon' type='image/png' href='images/favicon/favicon.ico' />
+  <!-- <link rel='icon' type='image/png' href='images/favicon/favicon.ico' /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css"
     integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg=="
     crossorigin="anonymous">
@@ -79,12 +80,24 @@
 
     <div class="large-8.columns">
       <div class="translucent-form-overlay">
-        <label>
-          Add your own Larry
+        <h3>Add your own Larry</h3>
           <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
-        </label>
+        </h3>
         <button id="larry-create" type="button" class="primary button expanded search-button">
           Submit
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="large-8.columns">
+      <div class="translucent-form-overlay">
+        <h3>Want your Larry Ipsum emailed?</h3>
+          <input type="email" id="larry-email" placeholder="Enter email address"></input>
+        </h3>
+        <button id="email-button" type="submit" class="primary button expanded search-button">
+          Send email
         </button>
       </div>
     </div>
