@@ -11,9 +11,7 @@ cursive text:
 #welcome-header {
     font-family: 'Petit Formal Script', cursive;
     font-size: 72px;
-    color: #141414;
-    text-shadow: 2px 2px 5px white;
-
+    color: #D3D3D3;;
 }
 
 #welcome-button {
