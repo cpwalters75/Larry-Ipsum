@@ -43,7 +43,6 @@ body {
 
 .hover-underline-menu .menu {
   background:  linear-gradient(to bottom right, #131313, transparent);
-  background-color: #d4af37,
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -75,12 +74,11 @@ body {
 /*--START OF CONTENT BOX--*/
 
 .translucent-form-overlay {
-  max-width: 500px;
-  width: 100%;
   background-color: rgba(254,254,254,0.8);
   padding: 20px;
   margin: 2%;
   color: rgba(54, 54, 54);
+  height:80%
 }
 
 .translucent-form-overlay .columns.row {
@@ -106,7 +104,12 @@ body {
 .translucent-form-overlay input::placeholder {
   color: #8a8a8a;
 }
+/*==============================================================================================================*/
+ /*--START OF IPSUM.HTML */
 
+ p[data-set='ipsum'] {
+   text-indent: 3%;
+ }
 /*==============================================================================================================*/
  /*--START OF HALLOFLARRY.HTML */
 
@@ -323,3 +326,5 @@ body {
 .social-icon-button.facebook span {
   background-color: #3b5998;
 }
+
+

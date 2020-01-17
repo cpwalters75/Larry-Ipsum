@@ -40,11 +40,11 @@
       </nav>
     </div>
   </header>
-  <div class="row">
-    <div class="large-4.columns">
+  <div class="grid-x">
+    <div class="cell medium-4">
       <div class="translucent-form-overlay">
         <form>
-          <h3>Build Your Ipsum</h3>
+          <h3>Build Your Ipsum!</h3>
           <div class="row columns">
             <label>Number of Paragraphs</label>
             <select id="para-quantity" name="status" type="text">
@@ -54,6 +54,7 @@
             </select>
             </label>
           </div>
+
           <div class="row columns">
             <label>Length of Paragraphs
               <select id="para-length" name="status" type="text">
@@ -69,40 +70,39 @@
         </form>
       </div>
     </div>
-    <div class="large-8.columns">
+    <div class="cell medium-8">
       <div class="translucent-form-overlay">
-        <label>
-          Your Ipsum will appear here!
-          <p id="publish-ipsum" placeholder="None"></p>
+        <p id="label">Your Ipsum will appear here!</p>
         </label>
       </div>
     </div>
+  </div>
 
-    <div class="large-8.columns">
+  <div class="grid-x">
+    <div class="cell medium-6">
       <div class="translucent-form-overlay">
         <h3>Add your own Larry</h3>
-          <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
+        <textarea id="new-larry" placeholder="... so, call it Larry."></textarea>
         </h3>
         <button id="larry-create" type="button" class="primary button expanded search-button">
           Submit
         </button>
+        </form>
       </div>
     </div>
 
-  </div>
-  <div class="row">
-    <div class="large-8.columns">
+    <div class="cell medium-6">
       <div class="translucent-form-overlay">
         <h3>Want your Larry Ipsum emailed?</h3>
-          <input type="email" id="larry-email" placeholder="Enter email address"></input>
+        <input type="email" id="larry-email" placeholder="Enter email address"></input>
         </h3>
         <button id="email-button" type="submit" class="primary button expanded search-button">
           Send email
         </button>
       </div>
     </div>
-
   </div>
+
 
 
   <!-- Start of Scripts-->

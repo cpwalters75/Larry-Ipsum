@@ -42,12 +42,11 @@ router.get('/ipsum/:quantity/:length', (req, res) => {
   let ipsumLength = paraQuantity * paraLength;
 
   db.ipsums.findAll({  order: [ db.Sequelize.fn( 'RAND' ) ], limit: ipsumLength }).then((dbPost) => {
-    let ipsum = '';
-    dbPost.forEach((line)=> {
-      ipsum += line.quote + " ";
-    });
-
-    res.json(ipsum);
+    let data = {
+      ipsum: dbPost,
+      length : paraLength
+    }
+    res.json(data);
 
   }).catch((error) => {
     console.error(error);
