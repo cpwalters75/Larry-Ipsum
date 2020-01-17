@@ -21,7 +21,6 @@ $(document).ready(() => {
           ipsum = '';
         }
       });
-
     });
   };
 
