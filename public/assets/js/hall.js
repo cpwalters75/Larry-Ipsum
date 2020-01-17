@@ -1,18 +1,28 @@
-// const axios = require('axios');
+axios.get('/api/hall_of_larries')
+  .then((response) => {
+    const larries = response.data;
+    larries.forEach((larry, index) => {
+      let classString = '';
+      if (index % 2) {
+        classString = 'right';
+      }
+      const date = new Date(larry.larry_birthdate).getFullYear();
+      console.log(date);
+      console.log(larry.image);
+      const timeline = `
+    <div class="timeline-item">
 
-// const larryTimeline = function () {
-  
-//   axios.get('/api/hall_of_larries')
-//     .then((response) => {
-//       console.log(response);
+      <div class="timeline-icon" id="larry-time" style="background-image: url(${larry.image}); background-size:100% 100%">
       
-//       response.data.forEach((larry) => {
-      
-//       console.log(activity);
-//       $table.append(`<tr><td>${activity.name}</td><td>${activity.measurement}</td><td>${activity.unit}</td><td><button data-id="${activity.id}" class="btn btn-danger delete-button">Delete</button></td></tr>`);
-//     });
-//   axios.post("/api/activities", activity)
-//   .then((response) => {
-//   window.location = "/activities";
-//   });
-// };
+        
+      </div>
+      <div class="timeline-content larryfont ${classString}">
+        <p class="timeline-content-date larryfont" >${date}</h2>
+        <p class = "larryfont">${larry.name}</p>
+        <p class= "larryfont">${larry.description}</p>
+      </div>
+    </div>`;
+
+      $('.timeline').append(timeline);
+    });
+  });

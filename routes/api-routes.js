@@ -92,7 +92,10 @@ router.post('/send', (req, res) => {
 
 router.get('/hall_of_larries', (req, res) => {
   
-  db.hall_of_larries.findAll({}).then((data) => {
+  db.hall_of_larries.findAll({
+    order:  [['larry_birthdate', 'DESC'],
+    ],
+  }).then((data) => {
     res.json(data);
     
   });
