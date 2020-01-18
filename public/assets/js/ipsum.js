@@ -1,6 +1,6 @@
 
 $(document).ready(() => {
-  var ipsumText = document.querySelector('#label');
+  const ipsumText = document.querySelector('#label');
   const getContent = function (paraQuantity, paraLength) {
     let queryString = '/api/ipsum/';
     queryString += paraQuantity;
@@ -10,14 +10,14 @@ $(document).ready(() => {
     $.get(queryString, (data) => {
       let ipsum = '';
       let counter = 0;
-      let count = 0;
+      const count = 0;
       console.log(data);
       data.ipsum.forEach((line) => {
-        ipsum += line.quote + " ";
+        ipsum += `${line.quote} `;
         counter += 1;
         if (counter >= data.length) {
           $('#label').append(`<p data-set = "ipsum">${ipsum}</p>`);
-          counter= 0;
+          counter = 0;
           ipsum = '';
         }
       });
@@ -32,6 +32,8 @@ $(document).ready(() => {
     const paraQuantity = $('#para-quantity').val();
     getContent(paraQuantity, paraLength);
   });
+
+
 
   // below is for creating new Larrys
 
@@ -67,6 +69,4 @@ $(document).ready(() => {
   }
 
   $(document).on('click', '#email-button', sendEmail);
-
-
 });

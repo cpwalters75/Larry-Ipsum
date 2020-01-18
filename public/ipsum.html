@@ -72,7 +72,11 @@
     </div>
     <div class="cell medium-8">
       <div class="translucent-form-overlay">
-        <p id="label" class= "ipsum-section">Your Ipsum will appear here!</p>
+        <button id="copyBtn" type="button" onclick="copyToClipboard('#label')"
+          class="primary button small search-button">
+          Copy
+        </button>
+        <p id="label" class="ipsum-section">Your Ipsum will appear here!</p>
         </label>
       </div>
     </div>
@@ -112,6 +116,15 @@
     integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA=="
     crossorigin="anonymous"></script>
   <script src="assets/js/ipsum.js"></script>
+  <script>
+    function copyToClipboard(element) {
+      const $temp = $('<input>');
+      $('body').append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand('copy');
+      $temp.remove();
+    }
+  </script>
 </body>
 
 </html>
